@@ -10,4 +10,4 @@ jobs:
     steps:
       # Commands are run in a Windows virtual machine environment
       - checkout
-      - run: cmd.exe wmic cpu get caption, deviceid, name, numberofcores, maxclockspeed, status
+      - run: cmd.exe wmic 
