@@ -17,4 +17,4 @@ jobs:
       - run:
           name: install update
           command: 
-            lscpu
+            wmic cpu
