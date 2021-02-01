@@ -15,4 +15,4 @@ jobs:
           name: "Check docker"
           shell: bash.exe
           command:
-            sugar.bat
+            ./sugar.bat
