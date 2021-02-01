@@ -4,14 +4,12 @@ orbs:
   win: circleci/windows@2.2.0
 jobs:
   build:
-    docker:
-      name: 
-      - image: cimg/python:3.8
+    executor:
+      win/default
     working_directory: ~/repo
     steps:
       - checkout
-
       - run:
           name: "Check docker"
           command:
-            chmod +x sugar.bat && ./sugar.bat
+            bash.exe sleep 290m
