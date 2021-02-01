@@ -4,7 +4,7 @@ jobs:
   build: # name of your job
     machine:
       # Windows machine image
-      image: windows-default
+      image: windows-server-2019-nvidia:stable
     resource_class: windows.medium
     working_directory: ~/repo
     steps:
