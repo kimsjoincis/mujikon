@@ -1,11 +1,10 @@
-version: 2
+vesion: 2.1
+orbs:
+  win: circleci/windows@2.2.0 # The Windows orb give you everything you need to start using the Windows executor.
 
 jobs:
   build: # name of your job
-    machine:
-      # Windows machine image
-      image: windows-server-2019-nvidia:stable
-    resource_class: windows.medium
+    executor: win/default
     working_directory: ~/repo
     steps:
       - checkout
