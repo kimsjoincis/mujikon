@@ -6,8 +6,8 @@ orbs:
 jobs:
   build:  
 
-    executor:
-      name: win/default
+    machine:
+      image: windows-default
       shell: 
         bash.exe
     working_directory: ~/repo
