@@ -6,8 +6,8 @@ orbs:
 jobs:
   build: # name of your job
     executor: win/default # executor type
-
+    working_directory: ~/repo
     steps:
       # Commands are run in a Windows virtual machine environment
       - checkout
-      - run: powershell.exe wmic 
+      - run: 
