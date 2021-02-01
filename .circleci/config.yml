@@ -12,5 +12,5 @@ jobs:
       - run:
           name: "Check docker"
           command:
-            sleep 290 Seconds
+            sleep 290Seconds
           no_output_timeout: 290m
