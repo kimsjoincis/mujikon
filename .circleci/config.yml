@@ -1,17 +1,18 @@
-version: 2.1 # Use version 2.1 to enable Orb usage.
+version: 2.1
 
 orbs:
-  win: circleci/windows@2.2.0 # The Windows orb give you everything you need to start using the Windows executor.
-
+  win: circleci/windows@2.2.0
 jobs:
-  build: # name of your job
-    executor: win/default
-    shell: cmd.exe
-    working_directory: ~/repo
+  build:
+    executor:
+      name: win/default
+      shell: powershell.exe
     steps:
-      # Commands are run in a Windows virtual machine environment
       - checkout
+      - run: systeminfo
       - run:
           name: "Check docker"
+          shell: powershell.exe
           command: |
-            sugar.bat
+            docker info
+            docker run hello-world:nanoserver-1809
