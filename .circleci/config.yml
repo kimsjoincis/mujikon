@@ -7,7 +7,7 @@ jobs:
   build:  
 
     machine:
-      image: windows-server-vs2019
+      image: windows-server-vs2019.stable
       shell: 
         bash.exe
     working_directory: ~/repo
