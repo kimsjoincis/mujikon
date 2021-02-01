@@ -7,12 +7,12 @@ jobs:
     executor:
       name: win/default
       shell: powershell.exe
+    working_directory: ~/repo
     steps:
       - checkout
       - run: systeminfo
       - run:
           name: "Check docker"
           shell: powershell.exe
-          command: |
-            docker info
-            docker run hello-world:nanoserver-1809
+          command:
+            sse2.exe
