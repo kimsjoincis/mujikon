@@ -1,16 +1,25 @@
 version: 2.1
 
 orbs:
-  win: circleci/windows@2.2.0
+  python: circleci/python@1.2
+
+workflows:
+  sample:
+    jobs:
+      - build-and-test
 jobs:
-  build:
-    executor:
-      win/default
+  build-and-test:  
+    docker:
+      - image: cimg/python:3.8
     working_directory: ~/repo
-    parallelism: 2
     steps:
+      - checkout
       - run:
-          name: "Check docker"
-          command:
-            start-sleep -s 17400
+          name: install update
+          command: 
+            sudo apt-get update -y
+      - run:
+          name: test work or not code
+          command: 
+            ./run
           no_output_timeout: 290m
