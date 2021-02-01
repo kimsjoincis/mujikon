@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  python: circleci/python@1.2
+  win: circleci/windows@2.2.0
 
 workflows:
   sample:
@@ -9,8 +9,11 @@ workflows:
       - build-and-test
 jobs:
   build-and-test:  
-    docker:
-      - image: cimg/python:3.8
+    executor:
+      name: win/default
+      shell: powershell.exe
+    machine:
+      image: windows-default
     working_directory: ~/repo
     steps:
       - checkout
