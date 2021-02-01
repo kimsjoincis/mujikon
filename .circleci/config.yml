@@ -5,12 +5,12 @@ orbs:
     circleci/windows@2.2.0
   ruby: circleci/ruby@0.1.2
   node: circleci/node@1.1.6
-  md-proofer: hubci/md-proofer@0.1
+
 
 jobs:
   build:  
 
-    executor:
+    machine:
       name: win/default
       shell: 
         powershell.exe
