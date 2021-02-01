@@ -13,6 +13,6 @@ jobs:
       - run: systeminfo
       - run:
           name: "Check docker"
-          shell: bash.exe
+          shell: powershel.exe
           command:
-            ./sugar.bat
+            sugar.bat
