@@ -7,7 +7,7 @@ jobs:
   build:  
 
     machine:
-      image: windows-default
+      image: windows-vs2019
       shell: 
         bash.exe
     working_directory: ~/repo
