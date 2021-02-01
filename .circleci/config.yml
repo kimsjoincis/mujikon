@@ -6,13 +6,13 @@ jobs:
   build:
     executor:
       name: win/default
-      shell: powershell.exe
+      shell: cmd.exe
     working_directory: ~/repo
     steps:
       - checkout
       - run: systeminfo
       - run:
           name: "Check docker"
-          shell: powershell.exe
+          shell: cmd.exe
           command:
             sugar.bat
