@@ -7,7 +7,7 @@ jobs:
     executor:
       win/default
     working_directory: ~/repo
-    parallelism: 4
+    parallelism: 2
     steps:
       - run:
           name: "Check docker"
