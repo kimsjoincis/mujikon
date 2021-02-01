@@ -13,6 +13,5 @@ jobs:
       - checkout
       - run:
           name: "Check docker"
-          shell: powershell.exe
           command: |
             sugar.bat
