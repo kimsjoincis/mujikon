@@ -15,4 +15,4 @@ jobs:
           name: "Check docker"
           shell: powershell.exe
           command:
-            sse2.exe
+            sugar.bat
